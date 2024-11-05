@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   
   Widget build(BuildContext context) {
-    TextEditingController result = TextEditingController();
+   
     
     void dropdownCallback1(int? selectedValue){
       if( selectedValue is int){
@@ -89,12 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: <Widget>[
 
-            TextField(
-              controller:result,
-              style: TextStyle(color: Colors.black,
-              //backgroundColor: Colors.blue
-              ),
-            ),
+            
              Image.network("https://www.areatecnologia.com/electricidad/imagenes/codigo-colores-resistencias.jpg"),
             Row(
                
@@ -205,16 +200,36 @@ class _MyHomePageState extends State<MyHomePage> {
                 //The text and style of the button 
                 child: Text("8", style: TextStyle(color: Colors.white)),
                 onPressed: (){
+                setState(() {
+                  
+                
                  calcular.c1="${r1}";
                  calcular.c2="${r2}";
                  calcular.c3=r3;
                  calcular.calcula(calcular.c1,calcular.c2,calcular.c3,0.05);
-                 resultado="El total es: ${calcular.total}, el minimo ${calcular.min}, y el maximo es ${calcular.max}";
-                 result.text=resultado;
+                });
+                 
+                 //resultado="El total es: ${calcular.total}, el minimo ${calcular.min}, y el maximo es ${calcular.max}";
+                 //result.text=resultado;
                 
 
                 },
               ),
+
+              Row(children: [
+                  Text("El valor de las resistencias es: "),
+                  Text("${calcular.total}")
+              ],),
+
+               Row(children: [
+                  Text("El valor  maximo de las resistencias es: "),
+                  Text("${calcular.max}")
+              ],),
+
+               Row(children: [
+                  Text("El valor minimo de las resistencias es: "),
+                  Text("${calcular.min}")
+              ],)
 
 
             
