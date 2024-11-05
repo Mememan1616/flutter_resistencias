@@ -195,10 +195,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 //The style of the button
                 style: ElevatedButton.styleFrom(
                   //The color of the button
-                  backgroundColor: const Color.fromARGB(255, 16, 148, 255),
+                  backgroundColor: const Color.fromARGB(255, 248, 4, 4),
                 ),
                 //The text and style of the button 
-                child: Text("8", style: TextStyle(color: Colors.white)),
+                child: Text("CALCULAR RESISTENCIA", style: TextStyle(color: Colors.white)),
                 onPressed: (){
                 setState(() {
                   
@@ -217,18 +217,19 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
 
               Row(children: [
-                  Text("El valor de las resistencias es: "),
-                  Text("${calcular.total}")
+                  Text("El valor de las resistencias es: ", style:TextStyle(color: Colors.black87, fontSize:20) ),
+                  
+                  Text("${calcular.total}", style:TextStyle(color: Colors.blueAccent, fontSize:20) )
               ],),
 
                Row(children: [
-                  Text("El valor  maximo de las resistencias es: "),
-                  Text("${calcular.max}")
+                  Text("El valor  maximo de las resistencias es: ",  style:TextStyle(color: Colors.black87, fontSize:20)),
+                  Text("${calcular.max}", style:TextStyle(color: Colors.blueAccent, fontSize:20))
               ],),
 
                Row(children: [
-                  Text("El valor minimo de las resistencias es: "),
-                  Text("${calcular.min}")
+                  Text("El valor minimo de las resistencias es: ",style:TextStyle(color: Colors.black87, fontSize:20)),
+                  Text("${calcular.min}", style:TextStyle(color: Colors.blueAccent, fontSize:20))
               ],)
 
 
