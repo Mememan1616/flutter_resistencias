@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-const List <String> colores=["Negro","Cafe","Rojo","Naranja", "Amarillo","Verde","Azul","Violeta","Gris", "Blanco" ];
-const List <int> values=[0,1,2,3,4,5,6,7,8,9];
+
 int r1=0;
 int r2=0;
 int r3=0;
